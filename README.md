@@ -26,6 +26,10 @@ Plugins that provide higher level insight.
 
 Efforts from one side should apply to the other where possible.
 
+#### Models (examples)
+
+Compile a set of marquee models that work with Guild.
+
 #### Open science + open source + open results
 
 Ability to publish results to a Depot where you can compare what
