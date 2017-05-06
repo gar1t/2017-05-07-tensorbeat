@@ -6,7 +6,7 @@
 .reveal li {
   list-style-type: none;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .reveal pre {
@@ -16,7 +16,7 @@
 }
 
 .reveal .narrow {
-  width: 640px;
+  width: 680px;
 }
 
 .reveal .mt {
@@ -33,6 +33,10 @@
 
 .reveal .q {
   font-size: 130%;
+}
+
+.reveal code {
+  color: #cce;
 }
 </style>
 
@@ -73,6 +77,8 @@ TensorBeat, Sunnyvale<br>May 7, 2017
 
 ---
 
+---
+
 <section data-background="#336">
 <h2>Project motivation</h2>
 </section>
@@ -80,7 +86,7 @@ TensorBeat, Sunnyvale<br>May 7, 2017
 ---
 
 <ul>
-<li>Streamline TensorFlow work flow, without taking over
+<li>Streamline TensorFlow work flow without taking over
 <li class="fragment">Simplify model development, especially for new users
 <li class="fragment">Encourage model reuse and collaboration
 </ul>
@@ -107,7 +113,7 @@ $ evaluate --latest-run
 $ guild view
 </pre>
 
-<img class="fragment narrow" src="img/view-5.png">
+<img class="fragment narrow" src="img/view-5.png" height="550">
 
 ---
 
@@ -116,6 +122,14 @@ $ guild view
 </pre>
 
 <img src="img/view-2.png" height="500">
+
+---
+
+<pre class="narrow">
+$ guild view
+</pre>
+
+<img src="img/view-001.png" height="500">
 
 ---
 
@@ -132,7 +146,7 @@ $ guild serve ./runs/20170430T190348Z-expert
 </pre>
 
 <pre class="narrow fragment mt mb0">
-$ curl http://localhost:6444 -d@request.json
+$ curl http://localhost:6444/run -d @request.json
 </pre>
 
 <pre class="narrow fragment mt0" style="font-size:18px">
@@ -158,10 +172,12 @@ $ curl http://localhost:6444 -d@request.json
 
 ## Work flow
 
-- Develop model / training script
-- Train model
-- Evaluate results + repeat
-- Serve model
+<ul>
+<li>Develop model / training script
+<li>Train model
+<li>Evaluate results + repeat
+<li>Serve model
+</ul>
 
 ---
 
@@ -182,9 +198,9 @@ $ curl http://localhost:6444 -d@request.json
 ---
 
 <ul>
-<li>Start with what's most important
-<li class="fragment">Highlight model characteristics
+<li>Highlight what's most important
 <li class="fragment">Low level details (power features) follow
+<li class="fragment">Simplify training and using a model (reuse and collaboration)
 </ul>
 
 ---
@@ -195,13 +211,48 @@ $ curl http://localhost:6444 -d@request.json
 
 ---
 
-## Deeper dive topics (to fill in)
+## RUNDIR
 
-- RUNDIR
-- Run DB
-- Data collectors
-- Polymer web components
-- TensorBoard integration
+---
+
+## Run DB
+
+---
+
+## Data collectors
+
+<ul>
+<li class="fragment">TensorFlow events (event_processing)
+<li class="fragment">System stats (psutil and custom)
+<li class="fragment">GPU stats (nvidia-smi)
+</ul>
+
+---
+
+## Polymer web components
+
+<div style="display:flex;align-items:center;flex-direction:column">
+<div style="
+  width: 200px;
+  height: 200px;
+  background: white;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding:20px;
+  ">
+    <img src="img/p-logo.png" style="margin-top:33px">
+</div>
+</div>
+
+---
+
+## TensorBoard integration
+
+<ul>
+<li class="fragment">Run TensorBoard as a background process
+<li class="fragment">Proxy requests for TensorBoard data
+<li class="fragment">Redistribute TensorBoard polymer components
+</ul>
 
 ---
 
@@ -232,9 +283,9 @@ need &ldquo;real time&rdquo; status updates?</div>
 
 <ul>
 <li>Enhanced visualization
-<li class="fragment">Intelligent run analysis and comparison
-<li class="fragment">Component / plugin exchange with TensorBoard project
-<li class="fragment">Really great examples
+<li class="fragment">Smart analysis and comparison
+<li class="fragment">Plugin (code) exchange with TensorBoard project
+<li class="fragment">More examples (model zoo)
 <li class="fragment">Open source + open science + open results
 </ul>
 
@@ -253,9 +304,3 @@ need &ldquo;real time&rdquo; status updates?</div>
 <li class="fragment">Python interface to TensorFlow
 <li class="fragment">Shell and Python interface to OS
 </ul>
-
----
-
-## TODO / Notes
-
-- Light on the operations focus - where does this go?
