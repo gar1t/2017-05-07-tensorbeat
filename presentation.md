@@ -195,6 +195,16 @@ $ curl http://localhost:6444 -d@request.json
 
 ---
 
+## Deeper dive topics (to fill in)
+
+- RUNDIR
+- Run DB
+- Data collectors
+- Polymer web components
+- TensorBoard integration
+
+---
+
 <section data-background="#336">
 <h2>Common questions</h2>
 </section>
@@ -243,3 +253,9 @@ need &ldquo;real time&rdquo; status updates?</div>
 <li class="fragment">Python interface to TensorFlow
 <li class="fragment">Shell and Python interface to OS
 </ul>
+
+---
+
+## TODO / Notes
+
+- Light on the operations focus - where does this go?
