@@ -357,7 +357,8 @@ saver.restore(sess, <b>FLAGS.rundir</b> + "/model/export")
 ---
 
 <ul>
-<li>https://github.com/guildai/guild
+<li>https://guild.ai
+<li class="fragment">https://github.com/guildai/guild
 <li class="fragment">Apache 2.0 license
 <li class="fragment">Polymer web components
 <li class="fragment">Python interface to TensorFlow
@@ -367,8 +368,6 @@ saver.restore(sess, <b>FLAGS.rundir</b> + "/model/export")
 ---
 
 ## Questions
-
----
 
 <table>
 <tr><th>Email   </th><td>g@rre.tt</td></tr>
